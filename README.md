@@ -2,6 +2,4 @@
 
 anywayss so heres my website
 
-its literally just index.html so there isnt much yet lol
-
-using node webserver lol
+using node http-server lol
