@@ -1,0 +1,18 @@
+body {
+	font-family: calibri, "Segoe UI", helvetica, arial, sans-serif;
+	width: 65%;
+	margin: auto;
+	font-size: 19px;
+	color: #303030;
+}
+h1 {
+	border-bottom: 3px solid #dedede;
+}
+#footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: #dedede;
+	text-align: center;
+}
