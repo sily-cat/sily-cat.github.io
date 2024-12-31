@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>discord webhook sender</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../style.css">
+	<script src="../setup.js"></script>
+</head>
+<body>
+	<h1>discord webhook sender</h1>
+   <p>webhook url: <input type="text" id="url"></p>
+	<p>message:<textarea id="message"></textarea></p>
+	<div class="centered">
+		<button class="primary" onclick="send_message()">send!</button>
+	</div>
+	<div id="footer"></div>
+	<script>
+		async function send_message() {
+			const url = document.getElementById("url").value;
+			const request_body = {
+				content: document.getElementById("message").value
+			}
+			try {
+				const response = await fetch(url, {
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json"
+					},
+					body: JSON.stringify(request_body)
+				});
+				document.getElementById("message").value = "";
+			} catch (error) {
+				alert("Error: " + error.message);
+			}
+		}
+	</script>
+</body>
+</html>
